@@ -23,3 +23,18 @@ int main(){
     return 0;
 }
 
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    cout << "Hello World" << endl;
+    cout << "This is c++";
+    cout << "Programming if fun" << endl;
+    cout << endl;
+    int a =  5;
+    cout << "The value of `a` is: " << a << endl;
+    int b = 6;
+    cout << "The value of `b` is: "  << b << "." << endl;
+    return 0;
+}
