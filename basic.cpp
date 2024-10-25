@@ -38,3 +38,66 @@ int main(){
     cout << "The value of `b` is: "  << b << "." << endl;
     return 0;
 }
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string name;
+    cout << "Hello, what is your name?" << endl;
+    cin >> name;
+    cout << "Hi, " << name << endl;
+
+    return 0;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int num;
+    num = 0;
+    
+    int num1, num2;
+    
+    cout << "Enter two numbers." << endl;
+    cin >> num1 >> num2;
+    int sum = num1 + num2;
+    cout << "The sum of " << num1 << " and " << num2 << " = " << sum << endl;
+    
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int age;
+    cout << "Please enter your age." << endl;
+    cin >> age;
+    if(age < 21){
+        cout << "You cannot drink." << endl;
+    } else {
+        cout << "You can drink." << endl;
+    }
+    
+    int score;
+    cout << "Please enter your score." << endl;
+    cin >> score;
+    if(score < 70){
+        cout << "You failed" << endl;
+    } else if(score >= 70 && score < 80){
+        cout << "You got a C. STUDY MORE!" << endl;
+    } else if(score >= 80 && score < 90){
+        cout << "You got a B. NOT STUDYING ENOUGH!" << endl;
+    } else if(score >= 90 && score < 95){
+        cout << "You got an A-. You are studying better." << endl;
+    } else {
+        cout << "Congrats you got an A. Good job studying.." << endl;
+    }
+    return 0;
+}
