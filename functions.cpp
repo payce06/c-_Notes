@@ -85,3 +85,54 @@ int main(){
     
     return 0;
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void greet(){
+    cout << "Hello, World!" << endl;
+}
+
+int multiply(int a, int b = 5){
+    return (a * b);
+}
+
+int main(){
+    greet();
+    cout << multiply(5) << endl;
+    cout << multiply(5, 6) << endl;
+    
+    return 0;
+}
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int add(int a, int b){
+    return a + b;
+}
+
+float add(float a, float b){
+    return a + b;
+}
+
+string add(string a, string b){
+    return a + b;
+}
+
+int main(){
+    int a = 5;
+    int b = 6;
+    cout << add(a, b) << endl;
+    
+    float c = 4.14;
+    float d = 3.1415926;
+    cout << add(c, d) << endl;
+    
+    string e = "Hello, ";
+    string f = "World";
+    cout << add(e, f);
+}
