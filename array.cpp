@@ -35,3 +35,58 @@ int main() {
     }    
    
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   
+    // Declaration and initialization of a 2D (multidimensional array)
+    // Create a 3 x 3 array
+    int matrix[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+   
+   
+    // Access the first list 2nd index
+    cout << matrix[0][2] << endl;
+   
+    // Access the last list last index
+    cout << matrix[2][2] << endl;
+   
+   
+    cout << "===========================" << endl;
+   
+   
+    // Loop through the 2D array that is of size 3 x 3
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+   
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int calculateSum(int array[], int length){
+    int sum = 0;
+    for(int i = 0; i < length; i++){
+        sum += array[i];
+    }
+    return sum;
+}
+
+int main(){
+    int array[5] = {5, 7, 2, 4, 9};
+    int length = sizeof(array) / sizeof(array[0]);
+    int sum = calculateSum(array, length);
+    cout << "The sum of the array:" << sum << endl;
+    return 0;
+}
