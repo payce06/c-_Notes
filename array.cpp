@@ -91,30 +91,3 @@ int main(){
     return 0;
 }
 
-// Find if the target exists in an array
-#include <iostream>
-using namespace std;
-
-bool isTargetFound(int array[], int length, int target){
-    for(int i = 0; i < length; i++){
-        if(array[i] == target) {
-            return true;
-        }
-    }
-    return false;
-}
-
-int main() {
-    int array1[5] = {1, 2, 3, 4, 5};
-    int length = sizeof(array1) / sizeof(array1[0]);
-    const int target = 5;
-    
-    if(isTargetFound(array1, length, target) == true){
-        cout << "Target Found" << endl;
-    } else {
-        cout << "Target Not Found" << endl;
-    }
-
-
-    return 0;
-}
