@@ -171,8 +171,6 @@ int main() {
     return 0;
 }
 
-cout << "Array.cpp =========================================================================================="
-
 // Find the min and max of an array
 #include <iostream>
 using namespace std;
