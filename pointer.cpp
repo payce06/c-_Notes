@@ -37,3 +37,114 @@ int main() {
     // of the first element because thats where the array starts from
     cout << "The address of the array is the address of the first element in the array: " << &arr << endl;
    
+   int *p = arr; // Remember for array, we don't need & to get the address. The variable itself
+    // an address
+   
+    // Another way of printing values in an array with the help of pointer
+    for (int i = 0; i < 4; i++) {
+        cout << "Address: " << (p + i) << " ||| ";
+        cout << "Value in the address: " << *(p + i) << endl;
+    }
+   
+   
+   
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+
+
+int main()
+{
+    int a = 5;
+    int* p = &a;
+    int** pp = &p;
+   
+    cout << "Value of a: " << a << endl;
+    cout << "Address of a: " << &a << endl;
+    cout << "============================" << endl << endl;
+   
+    cout << "Address stored by p: " << p << endl;
+    cout << "Address of p itself: " << &p << endl;
+    cout << "Value pointed by p: " << *p << endl;
+    cout << "============================" << endl << endl;
+   
+    cout << "Address stored by pp: " << pp << endl;
+    cout << "Address of pp itself: " << &pp << endl;
+    cout << "Final value pointed by pp: " << **pp << endl;
+    cout << "============================" << endl << endl;
+   
+
+    return 0;
+}
+
+// Passing pointers to variables in function
+#include <iostream>
+using namespace std;
+
+// Passing by value
+// int val = a;
+void increment1(int val) {
+    val = val + 1;
+}
+
+
+// Passing by pointer
+// int* ptr = &a;
+void increment2(int *ptr) {
+    *ptr = *ptr + 1;
+}
+
+
+int main()
+{
+
+    int a = 5;
+    cout << "Value of a before the first increment: " << a << endl;
+    increment1(a);
+    cout << "Value of a after the first increment: " << a << endl;
+   
+   
+    cout << endl << endl;
+    cout << "Value of a before the second increment: " << a << endl;
+    increment2(&a);
+    cout << "Value of a after the first increment: " << a << endl;
+   
+
+
+    return 0;
+}
+
+cout << "pointer.cpp ===============================================================" << endl;
+
+// Passing pointers to arrays
+#include <iostream>
+using namespace std;
+
+// Passing array normally
+void printArray1(int arr[], int length) {
+    for(int i = 0; i < length; i++){
+        cout << arr[i] << endl;
+    }
+    cout << endl;
+}
+
+
+// Passing array with pointers (almost the same)
+void printArray2(int* arr, int length) {
+    for(int i = 0; i < length; i++){
+        cout << arr[i] << endl;
+    }
+    cout << endl;
+}
+
+
+int main(){
+    int array1[5] = {5, 7, 2, 8, 3};
+    int length = sizeof(array1) / sizeof(array1[0]);
+    printArray1(array1, length);
+    printArray2(array1, length);
+    return 0;
+}
