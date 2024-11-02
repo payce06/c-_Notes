@@ -42,3 +42,27 @@ int main()
     myCar.vroom();
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+
+// Basic syntax of a class
+class ClassName{
+    // Public members
+    public:
+        void publicOutput(){
+            cout << "void" << endl;
+        }
+        
+    private:
+        int privateOutput;
+        
+};
+
+int main(){
+    ClassName myClass;
+    myClass.publicOutput();
+    return 0;
+}
+    
