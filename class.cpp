@@ -137,3 +137,41 @@ int main() {
 	car2.displayInfo();
 
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+// Create a class called BaseballTeam
+
+// Three private variables: establishedYear, players (which is an array of string of size 9)
+// and playerCount
+// Make playerCount 0 in the beginning
+
+// Two public variables: teamName and homeCity
+
+// Public function: setEstablishedYear. Ensure it is between 1850 and 2024. Print error otherwise.
+// Public function: getEstablishedYear
+
+// Public function: addPlayer. Add the newPlayer to the array of strings.
+// If playerCount > 9, then cout cannot add more player.
+
+// Public function: displayTeamInfo. Shows the team name, home city, established year and a for loop showing BaseballTeam
+// the players.
+
+class BaseballTeam{
+    private:
+    int establishedYear;
+    string players[9];
+    int playerCount = 0;
+    
+    public:
+    string teamName;
+    string homeCity;
+};
+
+
+int main() {
+   
+}
