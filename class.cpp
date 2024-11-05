@@ -203,5 +203,20 @@ class BaseballTeam{
 
 
 int main() {
-   
+       // Create a basebasll team called baseball1
+   BaseballTeam baseball1;
+    // Update team name
+    baseball1.teamName = "New York Mets";
+    // Update home city
+    baseball1.homeCity = "New York";
+    // Set established year
+    baseball1.setEstablishedYear(1962);
+    // Add three players
+    baseball1.addPlayer("Fransisco Lindor");
+    baseball1.addPlayer("Mark Vientos");
+    baseball1.addPlayer("Brandom Nimmo");
+
+    // Display Team Info
+    baseball1.displayTeamInfo();
+cout << "Add to main of baseball team" << endl;
 }
