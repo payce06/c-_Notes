@@ -169,6 +169,36 @@ class BaseballTeam{
     public:
     string teamName;
     string homeCity;
+
+    void setEstablishedYear(int establishedYear){
+        if(establishedYear >= 1850 && establishedYear <= 2024){
+           this->establishedYear = establishedYear;
+        } else {
+            cout << "Not a valid year." << endl;
+        }
+    }
+    int getEstablishedYear(){
+        return this->establishedYear;
+    }
+    void addPlayer(string addNewPlayer){
+        if(this->playerCount < 9){
+            this->players[this->playerCount] = addNewPlayer;
+            this->playerCount++;
+        } else {
+            cout << "There is no more room on the roster." << endl;
+        }
+    }
+    void displayTeamInfo(){
+        cout << "Team name: " << this->teamName << endl;
+        cout << "Home city: " << this->homeCity << endl;
+        cout << "The year established: " << this->establishedYear << endl; 
+        cout << "Players: " << endl;
+        for(int i = 0; i < this->playerCount; i++){
+            cout << this->players[i] << endl;
+        }
+        cout << endl << endl << endl;
+    }
+    cout << "add to class of 'baseball team'" << endl;
 };
 
 
