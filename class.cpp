@@ -274,5 +274,17 @@ class Continent{
 };
 
 int main() {
-    
+    // Create a continent object from the class called myContinent
+    Continent myContinent;
+    // Set the name, area, population and total countries
+    myContinent.continentName = "Asia";
+    myContinent.area = 1.68;
+    myContinent.population = 4815;
+    myContinent.setTotalCountries(48);
+    // Add 3 countries
+    myContinent.addCountry("India");
+    myContinent.addCountry("Mongolia");
+    myContinent.addCountry("Pakistan");
+    // Displaying continent info
+    myContinent.displayInfo();
 }
