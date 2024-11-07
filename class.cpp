@@ -243,6 +243,34 @@ class Continent{
     string continentName;
     double area;
     long population;
+
+    void addCountry(string newCountry){
+        if(countryCount < 50){
+            this->countries[this->countryCount] = newCountry;
+            this->countryCount++;
+        } else {
+            cout << "Invalid, exceeding maximum." << endl;
+        }
+    }
+    void setTotalCountries(int totalCountries){
+        if(totalCountries > 0 && totalCountries <= 50){
+            this->totalCountries = totalCountries;
+        } else {
+            cout << "Invalid total countries." << endl;
+        }
+    }
+    int getTotalCountries(){
+        return this->totalCountries;
+    }
+    void displayInfo(){
+        cout << "Continent Name: " << this->continentName << endl;
+        cout << "Continent Area: " << this->area << endl;
+        cout << "Contient Population: " << this->population << endl;
+        cout << "Total Conutries: " << this->totalCountries << endl;
+        for(int i = 0; i < this->countryCount; i++){
+            cout << "-" << this->countries[i] << endl;
+        }
+    }
 };
 
 int main() {
