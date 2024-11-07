@@ -220,3 +220,31 @@ int main() {
     baseball1.displayTeamInfo();
 cout << "Add to main of baseball team" << endl;
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Three private variables: totalCountries, countries (string array of size 50), countryCount
+
+// Three public variables: continentName, area (in square kilometers), population (in millions)
+
+// Public method: addCountry
+// Public method: setTotalCountries. Check if it is within 1 and 50
+// Public method: getTotalCountries
+// Public method: displayInfo (shows continent name, area, population, total countries, countries added)
+class Continent{
+    private:
+    int totalCountries;
+    string countries[50];
+    int countryCount = 0;
+    
+    public:
+    string continentName;
+    double area;
+    long population;
+};
+
+int main() {
+    
+}
