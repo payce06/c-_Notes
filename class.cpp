@@ -395,5 +395,21 @@ class BankAccount{
 
 
 int main() {
-    
+    // Without constructor we had to set each value once.
+    // BankAccount b1;
+    // b1.setBalance(100);
+    // b1.setAccountName("Deposit Account");
+   
+   
+    // With constructor we just have to pass the values in the initial call
+    BankAccount b1(100, "Deposit");
+    cout << "Balance: " << b1.getBalance() << endl;
+    cout << "Account Name: " << b1.getAccountName() << endl;
+   
+   
+    // Object that calls empty constructor
+    BankAccount b2;
+   
+   
+    return 0; 
 }
