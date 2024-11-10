@@ -288,3 +288,38 @@ int main() {
     // Displaying continent info
     myContinent.displayInfo();
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Create a transaction class
+// it should be able to store the amount and type of a transaction
+// it should have get and set for amount and type as public variables
+class Transaction {
+    private:
+        float amount;
+        string type;
+    
+    public:
+        float getAmount(){
+            return this-> amount;
+        }
+        
+        void setAmount(float amount){
+            this->amount = amount;
+        }
+        
+        string getType(){
+            return this-> type;
+        }
+        
+        void setType(string type){
+            this->type = type;
+        }
+};
+
+
+int main() {
+    
+}
