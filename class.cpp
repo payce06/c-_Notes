@@ -352,3 +352,48 @@ int main() {
    
     return 0;
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Bank Account class
+class BankAccount{
+  private:
+  double balance;
+  string accountName;
+ 
+  public:
+    //   Empty constructor
+    BankAccount(){
+    cout << "This is an empty constructor" << endl;
+    }
+ 
+    // Parameterized constructor
+    BankAccount(double balance, string accountName){
+        this->balance = balance;
+        this->accountName = accountName;
+    }
+
+    // Getters
+    double getBalance(){
+        return this->balance;
+    }
+    
+    string getAccountName(){
+        return this->accountName;
+    }
+   
+    
+   
+    // Destructor
+    ~BankAccount(){
+        cout << "Destructor is called." << endl;
+    }
+
+};
+
+
+int main() {
+    
+}
