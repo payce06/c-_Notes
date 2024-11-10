@@ -319,7 +319,19 @@ class Transaction {
         }
 };
 
+// Create a function that calculates the net amount
+float calculateNetAmount(Transaction transaction[], int size){
+    float netAmount = 0;
+    for(int i = 0; i < size; i++){
+        if(transaction[i].getType() == "Income"){
+           netAmount += transaction[i].getAmount();
+        } else {
+            netAmount -= transaction[i].getAmount();
+        }
+    }
+    return netAmount;
+}
 
 int main() {
-    
+
 }
