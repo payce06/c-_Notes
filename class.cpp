@@ -333,5 +333,22 @@ float calculateNetAmount(Transaction transaction[], int size){
 }
 
 int main() {
+    // Create a transaction of type Income with amount 100.00
+    Transaction transaction1;
+    transaction1.setAmount(100.00);
+    transaction1.setType("Income");
 
+    // Create a transaction of type Expense with amount 20.00
+    Transaction transaction2;
+    transaction2.setAmount(20.00);
+    transaction2.setType("Expense");
+   
+    // Create an array of Transaction class that has two elements
+    Transaction transArray[2] = {transaction1, transaction2};
+   
+   
+    // Now pass that array to calculate the net amount
+    cout << "The New Amount:" << calculateNetAmount(transArray, 2) << endl;
+   
+    return 0;
 }
