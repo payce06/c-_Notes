@@ -424,3 +424,21 @@ class Candidate{
     string name;
     string party;
     int votes;
+
+// Empty Constructor
+    Candidate(){
+        
+    }
+
+    // Parameterized constructor
+    Candidate(string n, string p, int v){
+        this->name = n;
+        this->party = p;
+        this->votes = v;
+    }
+
+    // Function to display candidate information
+    void displayInfo(){
+        cout << "Name: " << name << ", Party: " << party << ", Votes: " << votes << endl;
+    }
+};
