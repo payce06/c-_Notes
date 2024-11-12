@@ -442,3 +442,14 @@ class Candidate{
         cout << "Name: " << name << ", Party: " << party << ", Votes: " << votes << endl;
     }
 };
+
+// Function to find the candidate with the most votes
+Candidate findTopCandidate(Candidate candidates[], int numCandidates){
+    Candidate topCandidate = candidates[0];
+    for(int i = 0; i < numCandidates; i++){
+        if(candidates[i].votes > topCandidate.votes){
+            topCandidate = candidates[i];
+        }
+    }
+    return topCandidate;
+}
