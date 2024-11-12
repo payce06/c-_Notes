@@ -463,3 +463,32 @@ void displayCandidatesWithMinVotes(Candidate candidates[], int numCandidates, in
         }
     }
 }
+
+int main() {
+    int numCandidates;
+    cout << "Enter number of candidates: " << endl;
+    cin >> numCandidates;
+
+    // Declare an array of Candidate objects
+    Candidate candidates[numCandidates];
+
+    // Input candidate details
+    for(int i = 0; i < numCandidates; i++){
+        string name, party;
+        int votes;
+
+        cout << "\n Enter details for candidates: " << i + 1 << ": \n";
+
+        // Using cin for single-word inputs (name and party)
+        cout << "Name: " << endl;
+        cin >> name;
+        
+        cout << "Party: " << endl;
+        cin >> party;
+        
+         cout << "Votes: " << endl;
+         cin >> votes;
+         
+        // Create candidate object and assign to the array
+        candidates[i] = Candidate(name, party, votes);
+    }
