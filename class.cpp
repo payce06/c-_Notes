@@ -492,3 +492,23 @@ int main() {
         // Create candidate object and assign to the array
         candidates[i] = Candidate(name, party, votes);
     }
+
+// Display all candidates' information
+    cout << "\n --- All Election Candidate --- \n" << endl;
+    for(int i = 0; i < numCandidates; i++){
+        candidates[i].displayInfo();
+    }
+
+    // Find the candidate with the most votes
+    Candidate topCandidates = findTopCandidate(candidates, numCandidates);
+    cout << "\n Candidate with most: \n" << endl;
+    topCandidates.displayInfo();
+
+    // Display candidates who received more than a certain number of votes
+    int minVotes;
+    cout << "\n Enter the mimimum number of votes to filter candidate: \n" << endl;
+    cin >> minVotes;
+    displayCandidatesWithMinVotes(candidates, numCandidates, minVotes);
+
+    return 0;
+}
