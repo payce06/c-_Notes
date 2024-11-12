@@ -453,3 +453,13 @@ Candidate findTopCandidate(Candidate candidates[], int numCandidates){
     }
     return topCandidate;
 }
+
+// Function to display candidates with votes greater than a given number
+void displayCandidatesWithMinVotes(Candidate candidates[], int numCandidates, int minVotes){
+    cout << "The candidates with more than" << minVotes << "votes: " << endl;
+    for(int i = 0; i < numCandidates; i++){
+        if(candidates[i].votes > minVotes){
+            candidates[i].displayInfo();
+        }
+    }
+}
