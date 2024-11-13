@@ -553,3 +553,14 @@ NFLPlayer findTopScorer(NFLPlayer players[], int numPlayers) {
     }
     return topScorer;
 }
+
+
+// Function to display players who scored more than a given number of touchdowns
+void displayPlayersWithMinTouchdowns(NFLPlayer players[], int numPlayers, int minTouchdowns) {
+    cout << "Players with more than " << minTouchdowns << " touchdowns:" << endl;
+    for (int i = 0; i < numPlayers; i++) {
+        if (players[i].touchdowns > minTouchdowns) {
+            players[i].displayInfo();
+        }
+    }
+}
