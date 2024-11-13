@@ -512,3 +512,19 @@ int main() {
 
     return 0;
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Class to represent an NFL player
+class NFLPlayer {
+public:
+    string name;
+    string position;
+    int touchdowns;
+
+    // Empty Constructor
+    NFLPlayer() {
+       
+    }
