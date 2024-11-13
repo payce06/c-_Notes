@@ -528,3 +528,16 @@ public:
     NFLPlayer() {
        
     }
+
+    // Parameterized constructor
+    NFLPlayer(string n, string p, int t){
+        this->name = n;
+        this->position = p;
+        this->touchdowns = t;
+    }
+
+    // Function to display player information
+    void displayInfo() {
+        cout << "Name: " << name << ", Position: " << position << ", Touchdowns: " << touchdowns << endl;
+    }
+};
