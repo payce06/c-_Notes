@@ -541,3 +541,15 @@ public:
         cout << "Name: " << name << ", Position: " << position << ", Touchdowns: " << touchdowns << endl;
     }
 };
+
+
+// Function to find the player with the most touchdowns
+NFLPlayer findTopScorer(NFLPlayer players[], int numPlayers) {
+    NFLPlayer topScorer = players[0];
+    for (int i = 1; i < numPlayers; i++) {
+        if (players[i].touchdowns > topScorer.touchdowns) {
+            topScorer = players[i];
+        }
+    }
+    return topScorer;
+}
