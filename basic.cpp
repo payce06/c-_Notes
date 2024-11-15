@@ -123,3 +123,18 @@ int main(){
     
     return 0;
 }
+
+int main() {
+    int numPlayers;
+    cout << "Enter the number of NFL players: ";
+    cin >> numPlayers;
+
+    // Declare an array of NFLPlayer objects
+    NFLPlayer players[numPlayers];
+
+    // Input player details
+    for (int i = 0; i < numPlayers; i++) {
+        string name, position;
+        int touchdowns;
+       
+        cout << "\nEnter details for player " << i + 1 << ":\n";
