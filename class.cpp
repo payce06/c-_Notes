@@ -564,3 +564,23 @@ void displayPlayersWithMinTouchdowns(NFLPlayer players[], int numPlayers, int mi
         }
     }
 }
+
+        // Using cin for single-word inputs (name and position)
+        cout << "Name: ";
+        cin >> name;
+       
+        cout << "Position: ";
+        cin >> position;
+       
+        cout << "Number of Touchdowns: ";
+        cin >> touchdowns;
+       
+        // Create player object and assign to the array
+        players[i] = NFLPlayer(name, position, touchdowns);
+    }
+
+    // Display all players' information
+    cout << "\n--- All NFL Players ---\n";
+    for (int i = 0; i < numPlayers; i++) {
+        players[i].displayInfo();
+    }
