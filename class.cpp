@@ -584,3 +584,17 @@ void displayPlayersWithMinTouchdowns(NFLPlayer players[], int numPlayers, int mi
     for (int i = 0; i < numPlayers; i++) {
         players[i].displayInfo();
     }
+
+    // Find the player with the most touchdowns
+    NFLPlayer topScorer = findTopScorer(players, numPlayers);
+    cout << "\nPlayer with the most touchdowns:\n";
+    topScorer.displayInfo();
+
+    // Display players who scored more than a certain number of touchdowns
+    int minTouchdowns;
+    cout << "\nEnter the minimum number of touchdowns to filter players: ";
+    cin >> minTouchdowns;
+    displayPlayersWithMinTouchdowns(players, numPlayers, minTouchdowns);
+
+    return 0
+}
