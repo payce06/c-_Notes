@@ -11,3 +11,19 @@ private:
     string questionText;
     string options[4];
     char correctAnswer; // Correct answer as a character (A, B, C, or D)
+
+    public:
+    // Default constructor
+    Question() {
+       
+    }
+
+    // Parameterized constructor
+    Question(string qText, string opt1, string opt2, string opt3, string opt4, char cAnswer) {
+        questionText = qText;
+        options[0] = opt1;
+        options[1] = opt2;
+        options[2] = opt3;
+        options[3] = opt4;
+        correctAnswer = cAnswer;
+    }
