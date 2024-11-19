@@ -38,3 +38,18 @@ private:
             optionChar++;
         }
     }
+
+// Check the answer
+    bool checkAnswer(char userAnswer) {
+        if (toupper(userAnswer) == correctAnswer) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+};
+
+// Function to conduct the quiz
+int conductQuiz(Question questions[], int size) {
+    int score = 0;
+    char userAnswer;
