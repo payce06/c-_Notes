@@ -27,3 +27,14 @@ private:
         options[3] = opt4;
         correctAnswer = cAnswer;
     }
+
+// Ask the question
+    void askQuestion() {
+        cout << questionText << endl;
+        // Because it is storing optionChar as ASCII, C++ knows if I do ++, then it will store the next letter
+        char optionChar = 'A';
+        for (int i = 0; i < 4; i++) {
+            cout << optionChar << ". " << options[i] << endl;
+            optionChar++;
+        }
+    }
