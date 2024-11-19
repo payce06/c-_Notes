@@ -53,3 +53,20 @@ private:
 int conductQuiz(Question questions[], int size) {
     int score = 0;
     char userAnswer;
+    for (int i = 0; i < size; i++) {
+        cout << "\nQuestion " << i + 1 << ":\n";
+        questions[i].askQuestion();
+
+        cout << "Your Answer: ";
+        cin >> userAnswer;
+
+        if (questions[i].checkAnswer(userAnswer) == true) {
+            cout << "Correct!\n";
+            score++;
+        } else {
+            cout << "Wrong answer!\n";
+        }
+    }
+
+    return score;
+}
