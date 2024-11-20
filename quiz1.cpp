@@ -82,3 +82,18 @@ void displayHighScores(string players[][2], int playerCount) {
     }
     cout << endl;
 }
+
+// Main function
+int main() {
+    // Create questions array
+    const int totalQuestions = 5;
+    Question questions[totalQuestions] = {
+        Question("What is the capital of France?", "Paris", "London", "Rome", "Berlin", 'A'),
+        Question("What is 2 + 2?", "3", "4", "5", "6", 'B'),
+        Question("Who wrote 'Hamlet'?", "Shakespeare", "Dante", "Chaucer", "Homer", 'A'),
+        Question("What is the boiling point of water (Celsius)?", "90", "100", "110", "120", 'B'),
+        Question("Which planet is known as the Red Planet?", "Earth", "Mars", "Jupiter", "Saturn", 'B')
+    };
+
+    // Player data storage
+    const int maxPlayers = 100; // Maximum number of players
