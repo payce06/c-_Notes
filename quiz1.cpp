@@ -97,3 +97,20 @@ int main() {
 
     // Player data storage
     const int maxPlayers = 100; // Maximum number of players
+    string players[maxPlayers][2]; // 2D array to store player name and high score as strings
+    int playerCount = 0;          // Current number of players
+
+    string playerName;
+    char choice; // Can be 1, 2, or 3 when the user enters
+
+    cout << "Welcome to the Pace Quiz!\n";
+
+    // While true for forever loop so that you are displayed the menu after a game ends
+    while (true) {
+        // Show the menu options
+        cout << "\nMenu:\n";
+        cout << "1. Start New Quiz\n";
+        cout << "2. View High Scores\n";
+        cout << "3. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
