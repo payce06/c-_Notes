@@ -114,3 +114,17 @@ int main() {
         cout << "3. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
+
+        // See if the choice is 1, 2, or 3 and perform accordingly
+        if (choice == '1') {
+            cout << "Enter your name: ";
+            cin >> playerName;
+
+            // Conduct the quiz
+            int score = conductQuiz(questions, totalQuestions);
+            cout << "\nYou scored: " << score << " out of " << totalQuestions << endl;
+
+            // Update the existing player's high score
+            players[playerCount][0] = playerName;
+            players[playerCount][1] = to_string(score);
+            playerCount++;
