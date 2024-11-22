@@ -56,3 +56,14 @@ void displayHighScores(string players[][2], int playerCount) {
     }
     cout << endl;
 }
+
+// Main function
+int main() {
+    const int maxPlayers = 100;
+    string players[maxPlayers][2];
+    int playerCount = 0;
+
+    string playerName;
+    char choice;
+
+    cout << "Welcome to the Math Game!\n";
