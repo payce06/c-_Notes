@@ -44,3 +44,15 @@ int askMathQuestion() {
         return 0;
     }
 }
+
+// Function to display high scores
+void displayHighScores(string players[][2], int playerCount) {
+    cout << "\nHigh Scores:\n";
+    cout << setw(20) << "Player Name" << setw(10) << "Score\n";
+    cout << string(30, '-') << endl;
+
+    for (int i = 0; i < playerCount; i++) {
+        cout << setw(20) << players[i][0] << setw(10) << players[i][1] << endl;
+    }
+    cout << endl;
+}
