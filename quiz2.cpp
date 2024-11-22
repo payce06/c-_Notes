@@ -89,3 +89,19 @@ while (true) {
             }
 
             cout << "\nYou scored: " << score << " out of " << totalQuestions << endl;
+            // Save player data
+            players[playerCount][0] = playerName;
+            players[playerCount][1] = to_string(score);
+            playerCount++;
+        } else if (choice == '2') {
+            displayHighScores(players, playerCount);
+        } else if (choice == '3') {
+            cout << "Thank you for playing the Math Game!\n";
+            break;
+        } else {
+            cout << "Invalid choice. Please try again.\n";
+        }
+    }
+
+    return 0;
+}
