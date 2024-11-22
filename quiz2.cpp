@@ -25,3 +25,22 @@ int askMathQuestion() {
     } else if (op == '/') {
         // Ensure no division by zero
         while (num2 == 0) {
+    num2 = rand() % 100 + 1;
+        }
+        correctAnswer = num1 / num2;
+    }
+
+    // Ask the question
+    cout << "What is " << num1 << " " << op << " " << num2 << "? ";
+    int userAnswer;
+    cin >> userAnswer;
+
+    // Check the answer
+    if (userAnswer == correctAnswer) {
+        cout << "Correct!\n";
+        return 1;
+    } else {
+        cout << "Wrong! The correct answer was " << correctAnswer << ".\n";
+        return 0;
+    }
+}
