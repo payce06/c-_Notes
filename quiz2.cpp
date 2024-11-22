@@ -79,3 +79,13 @@ while (true) {
         if (choice == '1') {
             cout << "Enter your name: ";
             cin >> playerName;
+            int score = 0;
+            const int totalQuestions = 5;
+
+            // Ask questions
+            for (int i = 0; i < totalQuestions; i++) {
+                cout << "\nQuestion " << i + 1 << ":\n";
+                score += askMathQuestion();
+            }
+
+            cout << "\nYou scored: " << score << " out of " << totalQuestions << endl;
