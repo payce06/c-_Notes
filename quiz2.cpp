@@ -67,3 +67,15 @@ int main() {
     char choice;
 
     cout << "Welcome to the Math Game!\n";
+while (true) {
+        // Display menu
+        cout << "\nMenu:\n";
+        cout << "1. Start New Game\n";
+        cout << "2. View High Scores\n";
+        cout << "3. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (choice == '1') {
+            cout << "Enter your name: ";
+            cin >> playerName;
