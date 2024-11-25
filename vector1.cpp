@@ -67,3 +67,25 @@ int main()
     // Resize the vector to 10 elements. The missing/remaining elements initialized to 0.
     vector1.resize(10, 0);
     printVector(vector1, "resize");
+
+    // clear
+    // Removes all elements
+    vector1.clear();
+    printVector(vector1, "clear");
+   
+   
+    // Lastly, lets learn about 2D Vectors
+    vector<vector<int>> vector2 = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 0}
+    };
+   
+   
+    // Looping through the 2D vector
+    for (int i = 0; i < vector2.size(); i++) {
+        for (int j = 0 ; j < vector2[i].size(); j++) {
+            cout << vector2[i][j] << " ";
+        }
+        cout << endl;
+    }
