@@ -47,3 +47,23 @@ int main()
     // Adds the number 5 to the end of the vector
     vector1.push_back(5);
     printVector(vector1, "push_back");
+
+    // pop_back
+    // Removes the last number at the end of the vector
+    vector1.pop_back();
+    printVector(vector1, "pop_back");
+   
+    // insert
+    // Inserts a number 10 at index 2
+    vector1.insert(vector1.begin() + 2, 10);
+    printVector(vector1, "insert");
+   
+    // erase
+    // Remove the element at index 0
+    vector1.erase(vector1.begin()+0);
+    printVector(vector1, "erase");
+   
+    // resize
+    // Resize the vector to 10 elements. The missing/remaining elements initialized to 0.
+    vector1.resize(10, 0);
+    printVector(vector1, "resize");
