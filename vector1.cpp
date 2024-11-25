@@ -89,3 +89,22 @@ int main()
         }
         cout << endl;
     }
+
+       return 0;
+}
+
+#include <iostream>
+#include <set>
+#include <string>
+using namespace std;
+
+// printSet
+void printSet(set<int> s, string methodName) {
+    cout << "After the method: " << methodName << endl;
+    // This is another way of doing for loop for STL containers
+    // STL Containers - vectors, set, etc.
+    for (int val : s) {
+        cout << val << " ";
+    }
+    cout << endl;
+}
