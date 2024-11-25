@@ -28,3 +28,22 @@ int main()
     // empty
     // Check if the vector is empty. Returns 1 for empty and 0 for non-empty
     cout << "Is Empty: " << vector1.empty() << endl;
+
+        // size
+    // Gives the size of the vector
+    cout << "Size: " << vector1.size() << endl;
+   
+    // sort
+    // Sorts a vector. You will have to include <algorithm>
+    sort(vector1.begin(), vector1.end());
+    printVector(vector1, "sort");
+   
+    // reverse
+    // Reverse a vector
+    reverse(vector1.begin(), vector1.end());
+    printVector(vector1, "reverse");
+   
+    // push_back
+    // Adds the number 5 to the end of the vector
+    vector1.push_back(5);
+    printVector(vector1, "push_back");
