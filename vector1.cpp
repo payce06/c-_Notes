@@ -108,3 +108,23 @@ void printSet(set<int> s, string methodName) {
     }
     cout << endl;
 }
+
+int main()
+{
+    // Initialize a set with some elements
+    set<int> set1 = {4, 2, 3, 1};
+   
+    // size
+    // Get the size of the set
+    cout << "Size: " << set1.size() << endl;
+   
+    // empty
+    // Check if the set is empty
+    cout << "Is Empty: " << set1.empty() << endl;
+   
+    // insert
+    // Insert elements into the set
+    set1.insert(5);
+    printSet(set1, "insert(5)");
+   
+
