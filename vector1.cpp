@@ -127,4 +127,24 @@ int main()
     set1.insert(5);
     printSet(set1, "insert(5)");
    
-
+// Try to insert a duplicate
+    set1.insert(3);
+    printSet(set1, "insert(3) - no duplicates allowed");
+   
+    // erase
+    // Remove an element by value
+    set1.erase(2);
+    printSet(set1, "erase(2)");
+   
+    // find
+    // Check if an element exists
+    if (set1.find(3) != set1.end()) {
+        cout << "Element 3 found in the set." << endl;
+    } else {
+        cout << "Element 3 not found in the set." << endl;
+    }
+   
+    // clear
+    // Remove all elements from the set
+    set1.clear();
+    printSet(set1, "clear");
