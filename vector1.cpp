@@ -148,3 +148,23 @@ int main()
     // Remove all elements from the set
     set1.clear();
     printSet(set1, "clear");
+
+        // Lastly, let's learn about multiset
+    multiset<int> multiset1 = {1, 2, 2, 3, 3, 3, 4};
+   
+    cout << "Multiset elements: ";
+    for (int val : multiset1) {
+        cout << val << " ";
+    }
+    cout << endl;
+
+    // Remove all occurrences of a value
+    multiset1.erase(3);
+    cout << "After erasing all 3s: ";
+    for (int val : multiset1) {
+        cout << val << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
