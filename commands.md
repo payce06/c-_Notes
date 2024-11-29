@@ -51,3 +51,61 @@ Example: ping google.com (checks if google.com is reachable)
 tasklist
 Displays a list of currently running processes.
 Example: tasklist (shows all running processes)
+
+taskkill
+Terminates a running process.
+Example: taskkill /IM notepad.exe /F (forcefully kills Notepad)
+
+chdir
+Displays or changes the current directory (alternative to cd).
+Example: chdir D:\Projects (navigates to the Projects directory)
+
+attrib
+Changes file or directory attributes (read-only, hidden, etc.).
+Example: attrib +r file.txt (makes file.txt read-only)
+
+help
+Displays available commands and their descriptions.
+Example: help (lists all available commands)
+
+find
+Searches for text in a file.
+Example: find "keyword" file.txt (searches for "keyword" in file.txt)
+
+fc
+Compares two files and shows the differences.
+Example: fc file1.txt file2.txt (compares file1.txt and file2.txt)
+
+exit
+Closes the Command Prompt.
+Example: exit (closes the current session)
+
+Git Commands
+
+git init
+Initializes a new Git repository.
+Example: git init (creates a repository in the current directory)
+
+git clone
+Clones a remote repository.
+Example: git clone https://github.com/user/repo.git
+
+git status
+Displays the status of the working directory and staging area.
+Example: git status
+
+git add
+Adds changes to the staging area.
+Example: git add file.txt, git add . (stages all changes)
+
+git commit
+Commits changes to the repository.
+Example: git commit -m "Initial commit"
+
+git log
+Displays the commit history.
+Example: git log (shows all commits)
+
+git branch
+Lists, creates, or deletes branches.
+Example: git branch (lists branches), git branch feature (creates a new branch)
