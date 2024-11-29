@@ -48,3 +48,14 @@ int main() {
 
     // Iteration
     // Like for loop.
+    cout << "Iterating through map:" << endl;
+    for(auto entry : m){
+        cout << entry.first << ":" << entry.second << endl;
+    }
+
+    // Clear the Map
+    m.clear();
+    printMap(m, "Clearing the map");
+
+    return 0;
+}
