@@ -21,3 +21,18 @@ void printSet(const set<int> &s){
     }
     cout << endl;
 }
+// Function to print a map
+void printMap(const map<string, int> &m){
+    for(const auto &entry: m){
+        cout << entry.first << ":" << entry.second << endl;
+    }
+    cout << endl;
+}
+
+int main() {
+    // *** Vector Answers ***
+
+    // 1. Sort a vector
+    vector<int> vec1 = {8, 5, 7, 3};
+    sort(vec1.begin(), vec1.end());
+    printVector(vec1);
