@@ -36,3 +36,15 @@ int main() {
 
     // Check Existence (find)
     if(m.find("Cherry") != m.end()){
+        cout << "'Cherry' found with value: " << m["Cherry"] << endl;
+    } else {
+        cout << "'Cherry' not found with value: " << m["Cherry"] << endl;
+    }
+
+    // Erase Elements
+    m.erase("Apples");  // Remove by key
+    printMap(m, "erasing 'Apple'");
+   
+
+    // Iteration
+    // Like for loop.
