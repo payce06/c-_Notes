@@ -23,3 +23,16 @@ int main() {
     // Size and Empty Check
     cout << "Size: " << m.size()<< endl;
     cout << "Is map empty: " << (m.empty() ? "Yes": "No");
+
+     // Insert Elements
+    m["Dates"] = 10;  // Using []
+    m.insert({"Fig", 12});  // Using insert()
+    printMap(m, "inserting 'date' and 'fig'");
+
+    // Access and Modify Elements
+    cout << "Value of 'Banana': " << m["Banana"] << endl;
+    m["banana"] = 4;  // Modify value for an existing key
+    printMap(m, "modifying 'banana'");
+
+    // Check Existence (find)
+    if(m.find("Cherry") != m.end()){
