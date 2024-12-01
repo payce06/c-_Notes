@@ -78,3 +78,25 @@ int main() {
     // 10. Access first and last elements
     vector<int> vec9 = {7, 2, 3, 8};
     cout << "First: " << vec9.front() << "Back: " << vec9.back() << endl;
+
+        // *** Set Answers ***
+
+    // 1. Insert elements into a set
+    set<int> set1 = {5, 2, 7};
+    set1.insert(4);
+    printSet(set1);
+
+    // 2. Check size and emptiness
+   cout << "Size: " << set1.size() << endl;
+   cout << "Is empty? " << (set1.empty() ? "Yes" : "No");
+   
+    // 3. Erase an element
+    set1.erase(2);
+    printSet(set1);
+
+    // 4. Find an element
+    if(set1.find(3) != set1.end()){
+        cout << "3 is found. " << endl;
+    } else {
+        cout << "3 is not found. " << endl;
+    }
