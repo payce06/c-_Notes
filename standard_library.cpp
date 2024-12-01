@@ -59,3 +59,22 @@ int main() {
     // 6. Create a vector of size 5 initialized to 100
     vector<int> vec5 = {5, 100};
     printVector(vec5);
+
+    // 7. Resize a vector
+    vector<int> vec6 = {4, 3, 7, 3};
+    vec6.resize(5, -1);
+    printVector(vec6);
+
+    // 8. Remove an element at a specific position
+    vector<int> vec7 = {10, 20, 30, 40};
+    vec7.erase(vec7.begin()+2);
+    printVector(vec7);
+
+    // 9. Clear a vector
+    vector<int> vec8 = {7, 2, 9, 3};
+    vec8.clear();
+    cout<< "Vector 8 cleared: " << vec8.size() << endl;
+
+    // 10. Access first and last elements
+    vector<int> vec9 = {7, 2, 3, 8};
+    cout << "First: " << vec9.front() << "Back: " << vec9.back() << endl;
