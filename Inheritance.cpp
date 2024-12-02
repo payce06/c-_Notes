@@ -156,3 +156,30 @@ int main(){
     b.walk();
     b.screech();
 }
+
+#include <iostream>
+using namespace std;
+
+class Animal{
+    public:
+    Animal(){
+        cout << "Animal Constructor" << endl;
+    }
+    ~Animal(){
+        cout << "Animal Deconstrcutor" << endl;
+    }
+};
+
+class Dog : public Animal{
+    public:
+    Dog(){
+        cout << "Dog Constructor" << endl;
+    }
+    ~Dog(){
+        cout << "Dog Deconstructor" << endl;
+    }
+};
+
+int main(){
+    Dog d;
+}
