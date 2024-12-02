@@ -83,3 +83,37 @@ int main(){
         d.walk();
         d.barking();
 }
+
+#include <iostream>
+using namespace std;
+
+class Animal{
+    public:
+    void eating(){
+        cout << "Eating..." << endl;
+    }
+};
+
+class Dog : public Animal{
+    public:
+    void bark(){
+        cout << "Barking..." << endl;
+    }
+};
+
+class Cat : public Animal{
+    public:
+    void meow(){
+        cout << "Meowing..." << endl;
+    }
+};
+
+int main(){
+    Dog d;
+    d.eating();
+    d.bark();
+    
+    Cat c;
+    c.eating();
+    c.meow();
+}
