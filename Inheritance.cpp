@@ -117,3 +117,42 @@ int main(){
     c.eating();
     c.meow();
 }
+
+#include <iostream>
+using namespace std;
+
+class Animal{
+    public:
+    void eat(){
+        cout << "Eating..." << endl;
+    }
+};
+
+class Bird{
+    public:
+    void fly(){
+        cout << "Flying..." << endl;
+    }
+};
+
+class Mammal{
+    public:
+    void walk(){
+        cout << "Walking..." << endl;
+    }
+};
+
+class Bat : public Animal, public Bird, public Mammal {
+    public:
+    void screech(){
+        cout << "Screeching..." << endl;
+    }
+};
+
+int main(){
+    Bat b;
+    b.eat();
+    b.fly();
+    b.walk();
+    b.screech();
+}
