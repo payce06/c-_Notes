@@ -52,3 +52,34 @@ int main(){
     d.flying();
     d.quacking();
 }
+
+#include <iostream>
+using namespace std;
+
+class Animals{
+    public:
+    void eat(){
+        cout << "Eating..." << endl;
+    }
+};
+
+class Mammals : public Animals {
+    public:
+    void walk(){
+        cout << "Walking..." << endl;
+    }
+};
+
+class Dog : public Mammals{
+    public:
+    void barking(){
+        cout << "Barking..." << endl;
+    }
+};
+
+int main(){
+        Dog d;
+        d.eat();
+        d.walk();
+        d.barking();
+}
