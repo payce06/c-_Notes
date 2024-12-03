@@ -100,3 +100,22 @@ int main() {
     } else {
         cout << "3 is not found. " << endl;
     }
+
+    // 5. Clear a set
+    set1.clear();
+    cout << "After clear, size: " << set1.size() << endl;
+
+    // 6. Insert duplicates in multiset
+    multiset<int> mset1 = {5, 2, 6, 2};
+    mset1.insert(3);
+    for(int val : mset1){
+        cout << val << " " << endl;
+    }
+    cout<< endl;
+
+    // 7. Erase all occurrences of an element in a multiset
+    mset1.erase(1);
+    for(int val : mset1){
+        cout << val << " " << endl;
+    }
+    cout << endl;
