@@ -119,3 +119,24 @@ int main() {
         cout << val << " " << endl;
     }
     cout << endl;
+
+    // 8. Iterate through a set
+    set <int> set2 = {3, 7, 2, 8};
+    for(int val : set2){
+        cout << val << " " << endl;
+    }
+    cout << endl;
+
+    // 9. Check for a duplicate element in a set
+    set<int> set3 = {5, 2, 8, 0};
+    set3.insert(8);
+    printSet(set3);
+
+    // 10. Print the smallest element in the set
+    cout << "Smallest item: " << *set3.begin() << endl;
+
+    // *** Map Answers ***
+
+    // 1. Initialize and print a map
+    map<string, int> map1 = {{"Banana", 5}, {"Apple", 8}};
+    printMap(map1);
