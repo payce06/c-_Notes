@@ -140,3 +140,25 @@ int main() {
     // 1. Initialize and print a map
     map<string, int> map1 = {{"Banana", 5}, {"Apple", 8}};
     printMap(map1);
+
+     // 2. Insert elements
+    map1["Cherry"] = 7;
+    map1.insert({"Cherry", 6});
+    printMap(map1);
+
+    // 3. Access and modify elements
+    cout << "Value of 'Banana': " << map1["Banana"] << endl;
+    map1["Banana"] = 4;
+    printMap(map1);
+
+    // 4. Check for existence of a key
+    if(map1.find("Apple") != map1.end()){
+        cout << "'Apple' exists in the map.";
+    } else {
+        cout << "'Apple' does not exist in the map";
+    }
+    cout << endl;
+
+    // 5. Erase an element by key
+    map1.erase("Banana");
+    printMap(map1);
