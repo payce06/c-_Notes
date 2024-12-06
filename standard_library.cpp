@@ -162,3 +162,37 @@ int main() {
     // 5. Erase an element by key
     map1.erase("Banana");
     printMap(map1);
+
+    // 6. Iterate through a map
+    for(auto &entry : map1){
+        cout << entry.first << ":" << entry.second << endl;
+    }
+    cout << endl;
+
+    // 7. Clear a map
+    map1.clear();
+    cout << "After clear, size: " << map1.size() <<endl;
+
+    // 8. Access using [] for a non-existent key
+    map1["Grape"] = 15;
+    printMap(map1);
+
+    // 9. Find the key with the largest value
+    map<string, int> map2 = {{"x", 5},{"y", 10},{"z", 7}};
+    string maxKey = "";
+    int maxValue = -1;
+    for(auto &entry : map2){
+        if(entry.second > maxValue){
+            maxKey = entry.first;
+            maxValue = entry.second;
+        }
+    }
+    cout << "Key with the largest value. " << maxKey << endl;
+
+    // 10. Print all keys in a map
+    for(const auto &entry: map2){
+        cout << entry.first << endl;
+    }
+
+    return 0;
+}
