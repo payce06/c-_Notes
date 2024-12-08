@@ -255,3 +255,31 @@ public:
     // Constructor
     ElectricCar(string b, int y, int d, int bc) : Car(b, y, d), batteryCapacity(bc) {
     }
+
+    // Method to display electric car info
+    void displayElectricCarInfo() {
+        displayCarInfo();
+        cout << "Battery Capacity: " << batteryCapacity << " kWh" << endl;
+    }
+};
+
+int main() {
+    // Create objects of each class
+    cout << "Creating a Vehicle:" << endl;
+    Vehicle v("Generic Brand", 2000);
+    v.displayInfo();
+
+    cout << "\nCreating a Car:" << endl;
+    Car c("Toyota", 2022, 4);
+    c.displayCarInfo();
+
+    cout << "\nCreating a Motorcycle:" << endl;
+    Motorcycle m("Harley-Davidson", 2018, true);
+    m.displayMotorcycleInfo();
+
+    cout << "\nCreating an Electric Car:" << endl;
+    ElectricCar e("Tesla", 2023, 4, 75);
+    e.displayElectricCarInfo();
+
+    return 0;
+}
