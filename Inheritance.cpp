@@ -183,3 +183,48 @@ class Dog : public Animal{
 int main(){
     Dog d;
 }
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Base class
+class Vehicle {
+private:
+    string brand;
+    int year;
+
+public:
+    // Constructor
+    // I could have done brand = b; year = y; or even better: this->brand = b; this->year = y;
+    // Below is the shortcut format of this: brand(b); year(y);
+    Vehicle(string b, int y) : brand(b), year(y) {
+    }
+
+    // Method to display vehicle info
+    void displayInfo() {
+        cout << "Brand: " << brand << ", Year: " << year << endl;
+    }
+};
+
+// Derived class 1
+class Car : public Vehicle {
+private:
+    int doors;
+
+public:
+    // Constructor
+    // Vehicle(b, y) creates a parent object. Since it inherits from Vehicle class,
+    // this has to be called.
+    // doors(d) is same as doors = d;
+    Car(string b, int y, int d) : Vehicle(b, y), doors(d) {
+    }
+
+    // Method to display car info
+    void displayCarInfo() {
+        // Parent's function called.
+        displayInfo();
+        cout << "Doors: " << doors << endl;
+    }
+};
