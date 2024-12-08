@@ -228,3 +228,30 @@ public:
         cout << "Doors: " << doors << endl;
     }
 };
+
+// Derived class 2
+class Motorcycle : public Vehicle {
+private:
+    bool hasSidecar;
+
+public:
+    // Constructor
+    Motorcycle(string b, int y, bool h) : Vehicle(b, y), hasSidecar(h) {
+    }
+
+    // Method to display motorcycle info
+    void displayMotorcycleInfo() {
+        displayInfo();
+        cout << "Has Sidecar: " << (hasSidecar ? "Yes" : "No") << endl;
+    }
+};
+
+// Derived class 3 (from Car)
+class ElectricCar : public Car {
+private:
+    int batteryCapacity;
+
+public:
+    // Constructor
+    ElectricCar(string b, int y, int d, int bc) : Car(b, y, d), batteryCapacity(bc) {
+    }
